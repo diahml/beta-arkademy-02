@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar html dan css</title>
+    <style>
+        .form-pendaftaran {
+            background-color: white;
+            width: 300px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #btn-simpan {
+            color: white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 20px;
+        }
+
+        #text-alamat {
+            margin-top: 20px;
+        }
+
+    </style>
+    <script>
+        var TAG = "LOG_WEB : "
+        var angka1 = 10
+        var angka2 = 20
+
+        function Simpan() {
+            var jumlah = angka1 + angka2
+            var kali = angka1 * angka2
+            if(jumlah > kali){
+                Log("lebih besar jumlah")
+            }else{
+                Log("lebih besar kali")
+            }
+            for (let i = 0; i <10 ; i++) {
+                Log(i)
+            }
+
+            var nama = document.getElementsByName("nama")[0].value
+            var alamat = document.getElementsByName("alamat")[0].value
+            var tanggalLahir = document.getElementsByName("tanggal-lahir")[0].value
+            var noHp = document.getElementsByName("no-hp")[0].value
+
+            document.getElementById("nama").innerText = nama
+            document.getElementById("alamat").innerText = alamat
+            document.getElementById("tanggal-lahir").innerText = tanggalLahir
+            document.getElementById("no-hp").innerText = noHp
+            alert("Nama anda "+nama)
+        }
+        function Log(s) {
+            console.log(TAG,s)
+        }
+    </script>
+</head>
+<body style="background-color: aqua">
+<div class="form-pendaftaran">
+    <img src="img/logo.png" width="200px">
+    <h1>Form Pendaftaran</h1>
+    <form>
+        <a>Input nama :</a> <br>
+        <input name="nama" type="text"/><br>
+        <a style="color: #ff33cc">Input alamat :</a></br>
+        <input name="alamat"><br>
+        <a>Input tanggal lahir</a><br>
+        <input name="tanggal-lahir" type="date"><br>
+        <a>Input nomor HP</a><br>
+        <input name="no-hp" type="number"><br>
+        <button type="button" id="btn-simpan" name="btn-simpan" style="background-color: orange; border: none" onclick="Simpan()">Simpan</button>
+    </form>
+    <div class="Info">
+        Nama : <a id="nama"></a><br>
+        Alamat : <a id="alamat"></a><br>
+        Tanggahir : <a id="tanggal-lahir"></a><br>
+        No HP : <a id="no-hp"/></a><br>
+    </div>
+</div>
+
+</body>
+</html>
