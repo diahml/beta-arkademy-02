@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kalkulator</title>
+    
+    <style>
+        .kalkulator{
+            text-align: center;
+            padding: 150px;
+            
+        }
+    </style>
+
+	<script>
+       function Operasi() {
+        var angka1=document.getElementById("angka1");
+        var angka2=document.getElementById("angka2");
+        var pil=document.getElementById("operator");
+        var hasil=document.getElementById("hasil");
+
+        
+        if (pil.value == "kali") {
+            hasil.value = angka1.value * angka2.value;
+        } else {
+            hasil.value= angka1.value / angka2.value;
+        }
+        if (hasil.value %2 == 0){
+            alert("Bilangan ini adalah bilangan genap");
+        }else{
+            alert("Bilangan ini adalah bilangan ganjil");
+        }
+       }
+	</script>
+</head>
+<body>
+    <div class="kalkulator">
+        <h2>KALKULATOR</h2>
+        <form name="form">
+		Angka 1 : <input type="number" id="angka1" name="angka1"><br>
+        Angka 2 : <input type="number" id="angka2" name="angka2"><br><br>
+        operator
+        <select name="operator" id="operator">s
+            <option value="kali">kali (x)</option>
+            <option value="bagi">bagi (:)</option>
+        </select> <br><br>
+        <button type="button" id="sama-dengan" name="sama-dengan" onclick="Operasi()">lihat hasil</button><br><br>
+        Hasil  : <input type="number" id="hasil" name="hasil"><br><br>
+        </form>
+
+    </div>
+
+</body>
+</html>
